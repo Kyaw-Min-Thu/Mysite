@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+/* Main */
+    p{
+        color:rgb(183, 126, 53)
+    }
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    .main-div{
+        width:1200px;
+        background-color:rgb(212, 216, 219);
+        margin:0 auto;
+        position:relative;
+    }
+/* div before nav */
+        .div-before-nav{
+            /* display:flex; */
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width:1200px;
+            padding:20px 50px;
+            background-color:rgb(11, 11, 36);
+            color:azure;
+        }
+            /* message */
+                .message{
+                    /* width:330px; */
+                    display:flex;
+                    font-weight: bolder;
+                }
+                .message-icon-div{
+                    width:40px;
+                    background-color:antiquewhite;
+                    border-radius:50px;
+                    padding:14px 7px 7px 12px;
+                    color:blue;
+                    font-weight:bolder;
+                    margin-right:10px;
+                }
+            /* calendar */
+                .calendar{
+                    /* width:330px; */
+                    display:flex;
+                    font-weight: bolder;
+                    justify-self:center;
+                }
+                .calendar-icon-div{
+                    width:40px;
+                    background-color:antiquewhite;
+                    border-radius: 50px;
+                    padding:10px 13px 10px 13px;
+                    color:blue;
+                    /* font-weight:bolder; */
+                    margin-right:10px;
+                }
+            /* User */
+                .user{
+                    /* width:340px; */
+                    display:flex;
+                    flex:end;
+                    justify-self:end;
+                    /* margin-left:100px; */
+
+                }
+                .user-icon-div{
+                    width:40px;
+                    background-color:antiquewhite;
+                    border-radius: 50px;
+                    padding:12px 10px 10px 12px;
+                    color:blue;
+                    font-weight:bolder;
+                    margin-right:10px;
+                }
+                .b-user{
+                    padding:0 30px;
+                    border-radius: 10px;
+                    font-weight: bolder;
+                }
+                .icon{
+                    font-weight: bolder;
+                }
+/* Nav bar*/
+        .nav-main-div{
+            width:1200px;
+            height:70px;  
+            background-color:antiquewhite;
+            padding-right:20px;
+            padding-left:50px;
+            padding-right:50px;    
+        }
+        .h-nav{
+            text-decoration: underline 5px solid black;
+            float:left;  
+            margin-top:10px;
+        }
+        .nav{
+            float:right; 
+            margin-top:25px;
+            
+        }
+        .a-nav{
+            margin-right: 30px;
+            text-decoration: none;
+            font-weight:bold;
+        }
+        .a-nav:hover{
+            color:red;
+        }
+        .nav-btn{
+            background-color: rgb(9, 9, 60);
+            padding:5px 10px;
+            color:white;
+            border-radius:10px;
+        }
+/* profile */
+        .art-bg{
+            margin:0;
+            /* background-image:url("profile-computer.avif") */
+            /* width:100%; */
+            height:400px;
+            background-image:url("profile-computer.avif");
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position:center;
+            /* background-color: bisque; */
+            padding:0 50px;
+        }
+        .art-paragraph{
+            padding-top:50px;
+            width:600px;
+        }
+
+        .art-btn{
+            background-color: rgb(5, 5, 52);
+            padding:4px 10px;
+            border-radius: 5px;
+            margin-top:50px;
+            color:white;
+        }
+        .p-art{
+            margin-top:30px;
+        }
+/* Card */
+        .main-card-div{
+            width:1000px;
+            position:absolute;
+            display:flex;
+            left:230px;
+            top:500px;
+            color:white;
+        }
+        .card{
+            width:230px;
+            height:160px;
+            /* position:absolute; */
+            background-color:rgb(11, 11, 36);
+            margin-right:30px;
+            padding:10px;
+            text-align:center;
+        }
+        .hand-shape{
+            width:40px;
+            height:40px;
+            color:white;
+            /* border:2px solid rgb(208, 243, 11); */
+            border-radius:50px;
+            padding-top:10px;
+            margin-left: 83px;
+            box-shadow:3px 3px;
+            position:absolute;
+            top:-17px;
+            background-color:rgb(3, 3, 28);
+        }
+        .card h2{
+            margin-bottom:10px;
+            margin-top:18px;
+        }
+/* clear-div after card */
+        .clear-div{
+            height:180px;
+            clear:both;
+        }
+/* section */
+        .head-o-section{
+            text-align:center;
+            margin-bottom:50px;
+        }
+/* main section div */
+        .main-section-div{
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            grid-template-rows:1fr 1fr;
+            justify-items: center;
+            row-gap:30px;
+            margin-bottom:50px;
+        }
+        .main-section-div img{
+            width:40px;
+            height:40px;
+            border-radius:5px;
+            margin-right:10px;
+            margin-top:5px;
+        }
+        .f-section-div{
+            display:flex;
+        }
+        .f-section-div p{
+            width:200px;
+        }
+        .f-section-div h3{
+            margin-bottom:10px;
+        }
+
+/* Footer */
+        footer{
+            display:flex;
+            background-image:url("background1.avif");
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            background-color:rgba(12, 12, 36, 0.902) !important;
+            color:aliceblue;
+            height:300px;
+            padding:50px;
+            
+        }
+        footer h2{
+            color:black;
+        }
+        label{
+            color:black
+        }
+/* Left-form */
+        .left-form{
+            width:700px;
+            margin-top:-15px;
+        }
+        .f-f-div{
+            margin-bottom:40px;
+        }
+        .s-f-div{
+            margin-bottom:40px;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+        }
+        label{
+            display:block
+        }
+        .ss-ff-div{
+            display:inline;
+        }
+/* input  type */
+        input{
+            border:none;
+            background-color:rgba(105, 105, 215, 0);
+            height:25px;
+            width:250px;
+            margin-top:10px;
+            border-bottom:1px solid blue
+        }
+
+/* Right-form */
+        .right-form{
+            width:400px;
+        }
+        
+        .f-f-h2{
+            margin-bottom:20px;
+        }
+        .right-form div{
+            margin-bottom:30px;
+        }
+        .right-form p{
+            color:rgb(255, 141, 1)
+        }
+
+        button:hover{
+            background-color:rgb(36, 92, 92);
+            color:aqua;
+        }
+
+
+</style>
+<body>
+<!-- div before nav -->
+    <div class="main-div">
+        <div class="div-before-nav">
+            <div class="message">
+                <div class="message-icon-div">
+                    <i class="fa-regular fa-message icon"></i>
+                </div>
+                <div class="p-message">
+                    <p> Fale Conosco </p>
+                    <p> (47) 3084-5500</p>
+                </div>
+            </div>
+            <div class="calendar">
+                <div class="calendar-icon-div">
+                    <i class="fa-regular fa-calendar-check icon"></i>
+                </div>
+                <div class="p-calendar">
+                    <p>Attendimento</p>
+                    <p>Seg a sec dss 7h30 &s 17h</p>
+                </div>
+            </div>
+            <div class="user">
+                <div class="user-icon-div">
+                    <i class="fa-regular fa-user icon"></i>
+                </div>
+                <button class="b-user" type="button"> Area do Cilente </button>
+            </div>
+        </div>
+<!-- navication -->
+        <div class="nav-main-div">
+            <h1 class="h-nav">KMT</h1>
+            <div class="nav">
+                <a class="a-nav" href="https://www.youtube.com" alt="f-div"> SOBRA </a>
+                <a class="a-nav" href="https://www.youtube.com" alt="f-div"> SERVICE </a>
+                <a class="a-nav" href="https://www.youtube.com" alt="f-div"> INiCIO </a>
+                <a class="a-nav" href="https://www.youtube.com" alt="f-div"> TECHNO LAND </a>
+                <a class="a-nav" href="https://www.youtube.com" alt="f-div"> CONTACT</a>
+
+                <button class="nav-btn" type="button" > AREA SUAS EMPERESA</button>
+            </div>
+        </div>
+        <!-- Article -->
+        <div class="art-bg">
+            <div class="art-paragraph">
+                <h1>Focamos em oferecer</h1>
+                <h1>profissionalismo e competencia!</h1>
+                <p class="p-art">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde illo laboriosam, accusamus asperiores ea fuga mollitia. Assumenda velit facilis consequatur cupiditate,aspernatur voluptatibus, amet cumque!</p>
+
+                <button class="art-btn" type="button" >SAIBA MAIS </button>
+            </div>
+        </div>
+        <!-- Card -->
+        <div class="main-card-div">
+            <div class="f-card card">
+                <div class="hand-shape"><i class="fa-solid fa-handshake"></i></div>
+                <div class="p-div">
+                    <h2>CONGRESS</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi, tenetur reiciendis.</p>
+                </div>
+            </div>
+            <div class="t-card card">
+                <div class="hand-shape"><i class="fa-solid fa-code-compare"></i></div>
+                <div>
+                    <h2>COMPARATION</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi, tenetur reiciendis.</p>
+                </div>
+            </div>
+            <div class="s-card card">
+                <div class="hand-shape"><i class="fa-solid fa-scale-balanced"></i></div>
+                <div>
+                    <h2>BALANCEY</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi, tenetur reiciendis.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section -->
+        <section>
+
+            <!-- clear-div --><div class="clear-div"></div>
+            <header>
+                <div class="head-o-section">
+                    <h2> SERVICES </h2>
+                    <p>Please make contact to those section</p>
+                </div>
+            </header>
+
+            <!--Grid section -->
+
+            <div class="main-section-div">
+
+                <div class="f-section-div">
+                    <img src="building.avif">
+                    <div>
+                        <h3>Assessories </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi,.</p>
+                        <p>Title Mega &copy;</p>
+                    </div>
+                </div>
+
+                <div class="f-section-div">
+                    <img src="circle.avif">
+                    <div>
+                        <h3>Accommadation</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi,.</p>
+                        <p>Title Mega &copy;</p>
+                    </div>
+                </div>
+                
+                <div class="f-section-div">
+                    <img src="chart.avif">
+                    <div>
+                        <h3>Finincial</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi,.</p>
+                        <p>Title Mega &copy;</p>
+                    </div>
+                </div>
+
+                <div class="f-section-div">
+                    <img src="doc.avif">
+                    <div>
+                        <h3>Accommadation</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi,.</p>
+                        <p>Title Mega &copy;</p>
+                    </div>
+                </div>
+
+                <div class="f-section-div">
+                    <img src="building.avif">
+                    <div>
+                        <h3>AI HUMAN</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi,.</p>
+                        <p>Title Mega &copy;</p>
+                    </div>
+                </div>
+
+                <div class="f-section-div">
+                    <img src="doc.avif">
+                    <div>
+                        <h3>Project</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit excepturi,.</p>
+                        <p>Title Mega &copy;</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+                <!-- Footer -->
+        <Footer>
+                <!-- Left-form -->
+            <div class="left-form">
+                <div class="f-f-div">
+                    <Label for="number" alt="label">Phone</Label>
+                    <input type="number" alt="name"  placeholder="09XXXXXXXXXX">
+                </div>
+                <div class="flex-form-div">
+                    <div class="s-f-div">
+                        <div class="ss-ff-div">
+                            <Label class="ll" for="text" alt="label"> First Name</Label>
+                            <input type="text" alt="name">
+                        </div>
+                        <div class="ss-ff-div">
+                            <Label class="ll" for="text" alt="label">Second Name</Label>
+                            <input type="text" alt="name">
+                        </div>   
+                    </div>
+                </div>
+                <div class="final-label"></div>
+                <label for="mail" alt="mail">G-mail</label>
+                <input type="mail" alt="mail" placeholder="email@gmail.com">
+            </div>
+
+            <!-- right-form -->
+            <div class="right-form">
+                <div>
+                    <h2 class="f-f-h2">Fale Source</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.distinctio facere, fugit soluta eaque?elit.distinctio facere, fugit soluta eaque?.distinctio facere, fugit soluta eaque?</p>
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.distinctio facere, fugit soluta eaque?</p>
+                    <h2 class="s-f-h2">(+95) 762623982</h2>
+                </div>
+            </div>
+        </Footer>
+    </div>
+</body>
+</html>
